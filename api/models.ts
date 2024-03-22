@@ -13,7 +13,7 @@ export const mapContentfulPictureToPicture = (
     return {
       title: item.fields.title,
       description: item.fields.description,
-      imageUrl: item.fields.image.fields.file.url,
+      imageUrl: 'https:' + item.fields.image.fields.file.url,
       tags: item.fields.tags?.map((tag: any) => tag.fields.name),
     };
   });

@@ -1,3 +1,4 @@
+import { Picture } from "@/components/picture";
 import { getAllPictures } from "../api/contentful";
 
 
@@ -9,16 +10,7 @@ const Page = async () => {
       <h1>My Pictures</h1>
       <div>
         {pictures.map((picture) => (
-          <div key={picture.title}>
-            <h2>{picture.title}</h2>
-            <img src={picture.imageUrl} alt={picture.title} />
-            <p>{picture.description}</p>
-            <div>
-              {picture.tags?.map((tag) => (
-                <span key={tag}>{tag}</span>
-              ))}
-            </div>
-          </div>
+          <Picture key={picture.title} picture={picture} />
         ))}
       </div>
     </div>

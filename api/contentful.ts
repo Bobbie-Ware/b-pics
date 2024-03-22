@@ -10,3 +10,8 @@ export const getAllPictures = async (): Promise<Picture[]> => {
   const entries = await client.getEntries({ content_type: "picture" });
   return mapContentfulPictureToPicture(entries);
 };
+
+export const getAllAssets = async () => {
+  const assets = await client.getAssets();
+  return assets;
+}
