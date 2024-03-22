@@ -7,12 +7,9 @@ const Page = async () => {
 
   return (
     <div>
-      <h1>My Pictures</h1>
-      <div>
-        {pictures.map((picture) => (
-          <Picture key={picture.title} picture={picture} />
-        ))}
-      </div>
+      {pictures.map((picture) => (
+        <Picture key={picture.title} picture={picture} />
+      ))}
     </div>
   );
 }
