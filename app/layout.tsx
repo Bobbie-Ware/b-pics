@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/navbar"
 import { Providers } from "./providers"
-import { Link } from "@nextui-org/react"
 
 import "../styles/globals.css";
 
@@ -15,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning className="snap-y snap-mandatory scroll-smooth">
       <body>
         <Providers themeProps={{ enableSystem: true, children }}>
           <div className="relative flex flex-col h-screen">

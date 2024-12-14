@@ -1,14 +1,13 @@
-import { Picture } from "@/components/picture";
-import { getAllPictures } from "../api/contentful";
-
+import { getAllFrames } from "@/api/contentful";
+import { Frame } from "@/components/frame";
 
 const Page = async () => {
-  const pictures = await getAllPictures();
+  const frames = await getAllFrames();
 
   return (
     <div>
-      {pictures.map((picture) => (
-        <Picture key={picture.title} picture={picture} />
+      {frames.map((frame) => (
+        <Frame key={frame.picture.title} {...frame} />
       ))}
     </div>
   );

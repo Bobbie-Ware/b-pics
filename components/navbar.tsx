@@ -12,11 +12,8 @@ export const Navbar = () => {
     <NextUINavbar maxWidth="md" position="sticky">
       <NavbarContent className="basis-full" justify="center">
         <NavbarBrand as="li" className="gap-8 max-w-fit">
-          <NextLink href="/">
+          <NextLink href="/" passHref>
             <p className="font-bold text-inherit">B Pics</p>
-          </NextLink>
-          <NextLink href="/all">
-            <p className="font-bold text-inherit">All</p>
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
